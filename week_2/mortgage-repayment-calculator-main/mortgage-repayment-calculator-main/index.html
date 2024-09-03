@@ -10,54 +10,58 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 <style>
-		.bottom{
+		.bottom_section{
         	background:hsl(202, 55%, 16%);
           color:  hsl(203, 41%, 72%);
           font-family:Plus Jakarta Sans ;
         
         }
-    .form{
-         font-family:Plus Jakarta Sans ;         
+    .top_section{
+         font-family:Plus Jakarta Sans ;  
+         color: hsl(202, 55%, 16%);       
 
     }
 </style>
 </head>
 <body>
-<section class="form">
-  <h1>Mortgage Calculator</h1>
-   <button id="clear all"></button>
+<section class="top_section">
+  <h2>Mortgage Calculator</h2>
+  <a href="">clear all</a>
+  
   <br/>
-  Mortgage Amount
-  <br/>
-  Mortgage Term
-  <br/>
+  <p>Mortgage Amount</p>
+    <input type="number" placeholder="300,000">
+    <br/>
+  <p>Mortgage Term</p>
+    <input type="number" placeholder="25">
+    <br/>
 
-  Interest Rate
-  <br/>
+  <p>Interest Rate</p>
+    <input type="number" placeholder="5.25%">
+    <br/>
 
-  Mortgage Type
-  <br/>
-
-  Repayment
-  <br/>
-
-  Interest Only
-  <br/>
-
+  <p>Mortgage Type</p>
+    <input type="radio"id="repayment"value=" Repayment">
+    <label for="repayment">repayment</label>
+    <input type="radio" id="Interest_Only"value="Interest Only">
+    <label for="repayment">calculate Repayments</label>
+    <br/>
+  
+  <button type="submit">
   Calculate Repayments
   <br/>
-
+  </button>    
 </section>
-<section class="bottom">
+<section class="bottom_section">
   Results shown here
 
   Complete the form and click “calculate repayments” to see what 
   your monthly repayments would be.
-<br/>
-<br/>
+  <br/>
+  <br/>
 
- <h1> Your results</h1>
-<br/>
+  <h1> Your results</h1>
+  <br/>
   Your results are shown below based on the information you provided. 
   <br/>
   <br/>
