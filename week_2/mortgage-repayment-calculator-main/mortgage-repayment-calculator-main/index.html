@@ -18,39 +18,172 @@
         }
     .top_section{
          font-family:Plus Jakarta Sans ;  
-         color: hsl(202, 55%, 16%);       
-
+         color: hsl(202, 55%, 16%); 
     }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } 
+      .input_container{
+        position: relative;
+        background-color: transparent;
+        border-radius: 8px;
+        border:1px solid hsl(200, 24%, 40%);
+      }
+      .p_all{
+        padding:1rem;
+      }
+      .mortgage_amt{
+        margin-block: 1rem;
+      }
+      .mortgage_trm{
+        margin-block: 1rem;
+      }
+      .int_rte{
+        margin-block: 1rem;
+      }
+      .mortgage_amt_title{
+        margin-inline-end: 1rem;
+      }
+      .mortgage_trm_title{
+        margin-inline-end: 1rem;
+      }
+      .int_rte_title{
+        margin-inline-end: 1rem;
+      }
+      .currency{
+        top: 0;
+        bottom: 0;
+        background-color: hsl(203, 41%, 72%);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        /* z-index: -1; */
+        overflow: hidden;
+
+      }
+      .years{
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: hsl(203, 41%, 72%);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        /* z-index: -1; */
+        overflow: hidden;
+      
+          
+          }
+        .percent{
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: hsl(203, 41%, 72%);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        /* z-index: -1; */
+        overflow: hidden;
+      
+          
+          }
+      input{
+        border: none;
+        display: block;
+        width: 100%;
+        
+
+      }
+      
 </style>
 </head>
 <body>
 <section class="top_section">
-  <h2>Mortgage Calculator</h2>
-  <a href="">clear all</a>
-  
-  <br/>
-  <p>Mortgage Amount</p>
-    <input type="number" placeholder="300,000">
-    <br/>
-  <p>Mortgage Term</p>
-    <input type="number" placeholder="25">
-    <br/>
 
-  <p>Interest Rate</p>
-    <input type="number" placeholder="5.25%">
-    <br/>
-
-  <p>Mortgage Type</p>
-    <input type="radio"id="repayment"value=" Repayment">
-    <label for="repayment">repayment</label>
-    <input type="radio" id="Interest_Only"value="Interest Only">
-    <label for="repayment">calculate Repayments</label>
-    <br/>
+    <h2>Mortgage Calculator</h2>
+    <a href="">clear all</a>
+  </div>
   
+  <form>
+    <div class="p_all">
+      <div class="mortgage_amt">
+       <div class="input_container">
+          <p class="mortgage_amt_title">Mortgage Amount</p>
+          <div class="input_container">
+          <span class="currency">
+           £
+          </span>
+         <input type="number" id="mortgage_amt" >
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+  <div class="mortgage_trm">
+    <div class="p_all">
+      <div class="input_container">
+        <p class="mortgage_trm_title">Mortgage Term</p>
+        <div class="input_container">
+        <span class="years">
+          years
+        </span>
+        <input type="number" id="mortgage_trm" >
+    
+      </div>
+      </div>
+       
+ 
+      <br/>
+    </div>  
+  </div>
+
+
+  <div class="int_rte"> 
+    <div class="p_all">
+     <div class="input_container">
+      <p class="int_rte_title">intrest rate</p>
+        <div class="input_container">
+        <span class="percent">
+          %
+        </span>
+        <input type="number" id="int_rte" >
+    
+      </div>
+      </div>
+       
+      <input type="number" id="int_rte">
+      <br/>
+    </div>   
+  </div>
+  
+  <div class="mortgage_type">
+    <p>Mortgage Type</p>
+    <div class="radio input_container">
+      <input type="radio" name="mortgage_type" id="repayment"value=" Repayment">
+      <label for="repayment">repayment</label>
+    </div>
+    <div class="radio input_container">
+      <input type="radio" name="mortgage_type" id="Interest_Only"value="Interest Only">
+      <label for="repayment">Interest Only</label>
+    
+  </div> 
+  </div>
+ 
   <button type="submit">
   Calculate Repayments
   <br/>
-  </button>    
+  </button> 
+  </form>   
 </section>
 <section class="bottom_section">
   Results shown here
