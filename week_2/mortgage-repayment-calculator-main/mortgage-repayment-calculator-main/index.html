@@ -19,20 +19,31 @@
     .top_section{
          font-family:Plus Jakarta Sans ;  
          color: hsl(202, 55%, 16%); 
+         padding: 1rem;
     }
+    /* .form{
+
+      /* padding: 1rem;
+          }*/
     *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       } 
       .input_container{
+       
         position: relative;
-        background-color: transparent;
+        /* background-color: transparent; */
         border-radius: 8px;
-        border:1px solid hsl(200, 24%, 40%);
+        border: 1px solid hsl(200, 24%, 40%);
       }
-      .p_all{
-        padding:1rem;
+      /* .radio{
+        
+      } */
+      .btn{
+        display: inline-block;
+        padding-right: auto;
+        
       }
       .mortgage_amt{
         margin-block: 1rem;
@@ -53,31 +64,31 @@
         margin-inline-end: 1rem;
       }
       .currency{
-        top: 0;
-        bottom: 0;
+        top: 1px;
+        bottom: 1px;
+        left: 1px;
         background-color: hsl(203, 41%, 72%);
         position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 2.5rem;
-        /* z-index: -1; */
         overflow: hidden;
+        border-radius: 8px 0 0 8px;
 
       }
       .years{
-        top: 0;
-        bottom: 0;
-        right: 0;
+        top: 1px;
+        bottom: 1px;
+        right: 1px;
         background-color: hsl(203, 41%, 72%);
         position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 2.5rem;
-        /* z-index: -1; */
         overflow: hidden;
-      
+        border-radius: 0 8px 8px 0;
           
           }
         .percent{
@@ -90,19 +101,25 @@
         align-items: center;
         justify-content: center;
         width: 2.5rem;
-        /* z-index: -1; */
         overflow: hidden;
-      
+        border-radius: 0 8px 8px 0;
           
           }
       input{
-        border: none;
-        display: block;
+        
+        border-radius: 8px;
+        padding: 1rem;
+        /* display: block; */
         width: 100%;
         
 
       }
       
+      input[type="text"]:focus{
+
+        outline: none;
+      }
+
 </style>
 </head>
 <body>
@@ -112,59 +129,52 @@
     <a href="">clear all</a>
   </div>
   
-  <form>
-    <div class="p_all">
+  <form class="form">
       <div class="mortgage_amt">
-       <div class="input_container">
           <p class="mortgage_amt_title">Mortgage Amount</p>
           <div class="input_container">
           <span class="currency">
            £
           </span>
-         <input type="number" id="mortgage_amt" >
+         <input type="text" id="mortgage_amt" >
     
           </div>
-        </div>
       </div>
-    </div>
+
 
  
   <div class="mortgage_trm">
-    <div class="p_all">
-      <div class="input_container">
         <p class="mortgage_trm_title">Mortgage Term</p>
         <div class="input_container">
         <span class="years">
           years
         </span>
-        <input type="number" id="mortgage_trm" >
+        <input type="text" id="mortgage_trm" >
     
       </div>
-      </div>
+
        
  
       <br/>
     </div>  
-  </div>
+
 
 
   <div class="int_rte"> 
-    <div class="p_all">
-     <div class="input_container">
+
       <p class="int_rte_title">intrest rate</p>
         <div class="input_container">
         <span class="percent">
           %
         </span>
-        <input type="number" id="int_rte" >
+        <input type="text" id="int_rte" >
     
       </div>
-      </div>
+  
        
-      <input type="number" id="int_rte">
-      <br/>
+
     </div>   
-  </div>
+
   
   <div class="mortgage_type">
     <p>Mortgage Type</p>
@@ -179,11 +189,12 @@
   </div> 
   </div>
  
-  <button type="submit">
+  <button class="btn" type="submit">
   Calculate Repayments
   <br/>
   </button> 
-  </form>   
+  </form>
+
 </section>
 <section class="bottom_section">
   Results shown here
