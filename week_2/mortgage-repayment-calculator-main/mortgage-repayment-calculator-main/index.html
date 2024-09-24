@@ -5,215 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./assets/css/index.css">
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-<style>
-		.bottom_section{
-        	background:hsl(202, 55%, 16%);
-          color:  hsl(203, 41%, 72%);
-          font-family:Plus Jakarta Sans ;
-        
-        }
-    .top_section{
-         font-family:Plus Jakarta Sans ;  
-         color: hsl(202, 55%, 16%); 
-         padding: 1rem;
-    }
-    /* .form{
-
-      /* padding: 1rem;
-          }*/
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      } 
-      .input_container{
-       
-        position: relative;
-        /* background-color: transparent; */
-        border-radius: 8px;
-        border: 1px solid hsl(200, 24%, 40%);
-      }
-      /* .radio{
-        
-      } */
-      .btn{
-        display: inline-block;
-        padding-right: auto;
-        
-      }
-      .mortgage_amt{
-        margin-block: 1rem;
-      }
-      .mortgage_trm{
-        margin-block: 1rem;
-      }
-      .int_rte{
-        margin-block: 1rem;
-      }
-      .mortgage_amt_title{
-        margin-inline-end: 1rem;
-      }
-      .mortgage_trm_title{
-        margin-inline-end: 1rem;
-      }
-      .int_rte_title{
-        margin-inline-end: 1rem;
-      }
-      .currency{
-        top: 1px;
-        bottom: 1px;
-        left: 1px;
-        background-color: hsl(203, 41%, 72%);
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.5rem;
-        overflow: hidden;
-        border-radius: 8px 0 0 8px;
-
-      }
-      .years{
-        top: 1px;
-        bottom: 1px;
-        right: 1px;
-        background-color: hsl(203, 41%, 72%);
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.5rem;
-        overflow: hidden;
-        border-radius: 0 8px 8px 0;
-          
-          }
-        .percent{
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background-color: hsl(203, 41%, 72%);
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.5rem;
-        overflow: hidden;
-        border-radius: 0 8px 8px 0;
-          
-          }
-      input{
-        
-        border-radius: 8px;
-        padding: 1rem;
-        /* display: block; */
-        width: 100%;
-        
-
-      }
-      
-      input[type="text"]:focus{
-
-        outline: none;
-      }
-
-</style>
 </head>
 <body>
-<section class="top_section">
 
-    <h2>Mortgage Calculator</h2>
-    <a href="">clear all</a>
+  <section class="top_section padding_all" >
+
+    <h2 class="top_title_colour m_top_bottom">Mortgage Calculator</h2>
+    <a class="top_light_colour" href="#">Clear All</a>
   </div>
   
-  <form class="form">
-      <div class="mortgage_amt">
-          <p class="mortgage_amt_title">Mortgage Amount</p>
+  <form class="form ">
+      <div class="mortgage_amt m_top_bottom">
+          <p class="mortgage_amt_title  m_top_bottom font_thickness_500">Mortgage Amount</p>
           <div class="input_container">
-          <span class="currency">
-           £
-          </span>
-         <input type="text" id="mortgage_amt" >
-    
+            <span class="pounds centre_icon rounded_left">£</span>
+            <input type="text" class="mortgage_amt padding_all" >
           </div>
       </div>
 
 
  
-  <div class="mortgage_trm">
-        <p class="mortgage_trm_title">Mortgage Term</p>
-        <div class="input_container">
-        <span class="years">
-          years
-        </span>
-        <input type="text" id="mortgage_trm" >
-    
-      </div>
-
-       
- 
-      <br/>
-    </div>  
+    <div class="mortgage_trm">
+          <p class="mortgage_trm_title m_top_bottom font_thickness_500">Mortgage Term</p>
+            <div class="input_container">
+              <span class="years rounded_right order_right centre_icon"> years</span>
+              <input type="text" class="mortgage_trm padding_all" >
+            </div>
+   </div>  
 
 
 
-  <div class="int_rte"> 
-
-      <p class="int_rte_title">intrest rate</p>
-        <div class="input_container">
-        <span class="percent">
-          %
-        </span>
-        <input type="text" id="int_rte" >
-    
-      </div>
-  
-       
-
+    <div class="int_rte"> 
+        <p class="int_rte_title m_top_bottom font_thickness_500">intrest rate</p>
+          <div class="input_container">
+            <span class="percent rounded_right order_right centre_icon">%</span>
+            <input type="text" class="int_rte padding_all " >
+          </div>
     </div>   
 
   
-  <div class="mortgage_type">
-    <p>Mortgage Type</p>
-    <div class="radio input_container">
-      <input type="radio" name="mortgage_type" id="repayment"value=" Repayment">
-      <label for="repayment">repayment</label>
+    <div class="mortgage_type ">
+        <p class="m_top_bottom font_thickness_500 ">Mortgage Type</p>
+        <div class="m_top_bottom input_container ">
+          <label class="radio_padding" > 
+            <input type="radio" name="mortgage_type" class="remove_border"value=" Repayment">
+          </label>
+            <span class="radio_title font_thickness_500"> repayment</span>
+        </div>
+        <div class="m_top_bottom input_container ">
+          <label class="radio_padding">
+            <input type="radio" name="mortgage_type" class="remove_border"value="Interest Only">
+          </label>
+          <span class="radio_title font_thickness_500">Interest Only</span>
+        </div> 
     </div>
-    <div class="radio input_container">
-      <input type="radio" name="mortgage_type" id="Interest_Only"value="Interest Only">
-      <label for="repayment">Interest Only</label>
-    
-  </div> 
-  </div>
  
-  <button class="btn" type="submit">
-  Calculate Repayments
-  <br/>
+  <button class="btn m_top_bottom round_all_btn padding_all remove_border" type="button">
+    <span>
+      <img src="./assets/images/icon-calculator.svg" alt="calculator icon">
+    </span>
+    <span class="font_thickness_700 ">Calculate Repayments</span>
   </button> 
   </form>
 
 </section>
-<section class="bottom_section">
-  Results shown here
+<section class="bottom_section padding_all">
+  <div class="">
+    <h3 class="bottom_title_colour m_top_bottom"> Your results</h3>
+    <p class="bottom_text_colour m_bottom ">Your results are shown below based on the information you provided. 
+      
+    
+      To adjust the results, edit the form and click “calculate repayments” again.
+    
+      
 
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
-  <br/>
-  <br/>
+    
+    </p>
+  </div> 
+  <div class="bottom_payment_card padding_all">
+    <p class="m_bottom bottom_card_text_colour ">Your monthly repayments</p>
+    <h1 class="bottom_currency_colour m_top_bottom"><span>£</span>1,797.74</h1>
+    <hr>
+    <p class="m_top_bottom bottom_card_text_colour">Total you'll repay over the term</p>
+    <h3><span>£</span>539,322.94</h3>
+  </div>
 
-  <h1> Your results</h1>
-  <br/>
-  Your results are shown below based on the information you provided. 
-  <br/>
-  <br/>
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
 
 </section>
 
