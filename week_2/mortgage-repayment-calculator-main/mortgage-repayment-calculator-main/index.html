@@ -10,92 +10,92 @@
 
 </head>
 <body>
-
-  <section class="top_section padding_all" >
-
-    <h2 class="top_title_colour m_top_bottom">Mortgage Calculator</h2>
-    <a class="top_light_colour" href="#">Clear All</a>
-  </div>
-  
-  <form class="form ">
-      <div class="mortgage_amt m_top_bottom">
-          <p class="mortgage_amt_title  m_top_bottom font_thickness_500">Mortgage Amount</p>
-          <div class="input_container">
-            <span class="pounds centre_icon rounded_left">£</span>
-            <input type="text" class="mortgage_amt padding_all" >
-          </div>
-      </div>
-
-
- 
-    <div class="mortgage_trm">
-          <p class="mortgage_trm_title m_top_bottom font_thickness_500">Mortgage Term</p>
-            <div class="input_container">
-              <span class="years rounded_right order_right centre_icon"> years</span>
-              <input type="text" class="mortgage_trm padding_all" >
-            </div>
-   </div>  
-
-
-
-    <div class="int_rte"> 
-        <p class="int_rte_title m_top_bottom font_thickness_500">intrest rate</p>
-          <div class="input_container">
-            <span class="percent rounded_right order_right centre_icon">%</span>
-            <input type="text" class="int_rte padding_all " >
-          </div>
-    </div>   
-
-  
-    <div class="mortgage_type ">
-        <p class="m_top_bottom font_thickness_500 ">Mortgage Type</p>
-        <div class="m_top_bottom input_container ">
-          <label class="radio_padding" > 
-            <input type="radio" name="mortgage_type" class="remove_border"value=" Repayment">
-          </label>
-            <span class="radio_title font_thickness_500"> repayment</span>
-        </div>
-        <div class="m_top_bottom input_container ">
-          <label class="radio_padding">
-            <input type="radio" name="mortgage_type" class="remove_border"value="Interest Only">
-          </label>
-          <span class="radio_title font_thickness_500">Interest Only</span>
-        </div> 
+  <div class="flex_row  ">
+    <section class="top_section padding_all col-12 col-8 " >
+    <div>
+      <h2 class="top_title_colour m_top_bottom">Mortgage Calculator</h2>
+      <a class="top_light_colour" href="#">Clear All</a>
     </div>
- 
-  <button class="btn m_top_bottom round_all_btn padding_all remove_border" type="button">
-    <span>
-      <img src="./assets/images/icon-calculator.svg" alt="calculator icon">
-    </span>
-    <span class="font_thickness_700 ">Calculate Repayments</span>
-  </button> 
-  </form>
+    
+    <form class="form ">
+        <div class="mortgage_amt m_top_bottom">
+            <p class="mortgage_amt_title  m_top_bottom font_thickness_500">Mortgage Amount</p>
+            <div class="input_container">
+              <span class="pounds centre_icon rounded_left">£</span>
+              <input type="text" class="mortgage_amt padding_all" >
+            </div>
+        </div>
 
-</section>
-<section class="bottom_section padding_all">
-  <div class="">
-    <h3 class="bottom_title_colour m_top_bottom"> Your results</h3>
-    <p class="bottom_text_colour m_bottom ">Your results are shown below based on the information you provided. 
-      
-    
-      To adjust the results, edit the form and click “calculate repayments” again.
-    
-      
+
+  
+      <div class="mortgage_trm">
+            <p class="mortgage_trm_title m_top_bottom font_thickness_500">Mortgage Term</p>
+              <div class="input_container">
+                <span class="years rounded_right order_right centre_icon"> years</span>
+                <input type="text" class="mortgage_trm padding_all" >
+              </div>
+    </div>  
+
+
+
+      <div class="int_rte"> 
+          <p class="int_rte_title m_top_bottom font_thickness_500">intrest rate</p>
+            <div class="input_container">
+              <span class="percent rounded_right order_right centre_icon">%</span>
+              <input type="text" class="int_rte padding_all " >
+            </div>
+      </div>   
 
     
-    </p>
-  </div> 
-  <div class="bottom_payment_card padding_all">
-    <p class="m_bottom bottom_card_text_colour ">Your monthly repayments</p>
-    <h1 class="bottom_currency_colour m_top_bottom"><span>£</span>1,797.74</h1>
-    <hr>
-    <p class="m_top_bottom bottom_card_text_colour">Total you'll repay over the term</p>
-    <h3><span>£</span>539,322.94</h3>
+      <div class="mortgage_type ">
+          <p class="m_top_bottom font_thickness_500 ">Mortgage Type</p>
+          <div class="m_top_bottom input_container ">
+            <label class="radio_padding" > 
+              <input type="radio" name="mortgage_type" class="remove_border"value=" Repayment">
+            </label>
+              <span class="radio_title font_thickness_500"> repayment</span>
+          </div>
+          <div class="m_top_bottom input_container ">
+            <label class="radio_padding">
+              <input type="radio" name="mortgage_type" class="remove_border"value="Interest Only">
+            </label>
+            <span class="radio_title font_thickness_500">Interest Only</span>
+          </div> 
+      </div>
+  
+    <button class="btn m_top_bottom round_all_btn padding_all remove_border" type="button">
+      <span>
+        <img src="./assets/images/icon-calculator.svg" alt="calculator icon">
+      </span>
+      <span class="font_thickness_700 ">Calculate Repayments</span>
+    </button> 
+    </form>
+
+    </section>
+      <section class="bottom_section padding_all col-12 col-8 round_corner">
+        <div class="">
+          <h3 class="bottom_title_colour m_top_bottom"> Your results</h3>
+          <p class="bottom_text_colour m_bottom ">Your results are shown below based on the information you provided. 
+            
+        
+          To adjust the results, edit the form and click “calculate repayments” again.
+        
+          
+
+        
+          </p>
+        </div> 
+        <div class="bottom_payment_card padding_all">
+          <p class="m_bottom bottom_card_text_colour ">Your monthly repayments</p>
+          <h1 class="bottom_currency_colour m_top_bottom"><span>£</span>1,797.74</h1>
+          <hr>
+          <p class="m_top_bottom bottom_card_text_colour">Total you'll repay over the term</p>
+          <h3><span>£</span>539,322.94</h3>
+        </div>
+
+
+    </section>
   </div>
-
-
-</section>
-
 
 
 

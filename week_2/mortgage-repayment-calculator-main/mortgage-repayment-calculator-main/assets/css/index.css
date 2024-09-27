@@ -8,6 +8,19 @@
     font-family:Plus Jakarta Sans ;  
     
 }
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
      /* .bottom_section{ 
         background:hsl(202, 55%, 16%);
         color:  hsl(203, 41%, 72%);
@@ -88,9 +101,22 @@
     
   }
 
+
   input[type="text"]:focus{
 
     outline: none;
+  }
+  input[type="radio"]:checked{
+
+    /* display: none; */
+    border-color:1px solid hsl(61, 70%, 52%) ;
+    background-color: hsl(61, 70%, 52%);
+  }
+  div.input_container:has(input[type="radio"]:checked){
+
+         background-color: hsl(61, 70%, 52%); 
+        
+
   }
 .radio{
     margin-bottom: 0.5rem;
@@ -143,4 +169,23 @@ hr{
 }
 .bottom_card_text_colour{
     color: hsl(203, 41%, 72%);
+}
+
+.flex_col{
+    display: flex;
+    flex-direction: column;
+} 
+
+/* media queries */
+@media (min-width:768px){
+    
+    .col-8 {width: 66.66%;}
+
+    .flex_row{
+        display: flex;
+    }
+    .round_corner{
+        border-radius :0 0 0 90px ;
+    }
+
 }
