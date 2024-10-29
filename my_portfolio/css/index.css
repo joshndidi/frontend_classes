@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    /* font families */
+    --ff-primary:"Source Sans Pro", sans-serif;
+    --ff-secondary:"Source Code Pro", monospace;
+
+    /* font weights */
+
+    --fw-reg:300;
+    --ff-bold:900;
+
+    /* colours */
+    --clr-light:#fff;
+    --clr-dark:#000000ef;
+    --clr-accent:#39cf96;
+    --clr-black:#000;
+}
