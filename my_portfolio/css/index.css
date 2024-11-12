@@ -278,6 +278,34 @@ header{
         text-align: right;
         width: calc(100% + 1.5em);
     }
+/* about me */  
+    
+    .about-me{
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        grid-template-areas: "title img" "subtitle img""text img";
+        column-gap: 2em;
+    }
+
+    .section__title--about{
+        grid-area: title;
+    }
+
+    .section__subtitle--about{
+        grid-column: 1/-1 ;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+
+    .about-me__img{
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
 }
 
 @media (max-width:375px){
@@ -317,9 +345,113 @@ header{
 .services{
     margin-bottom: 5em;
 }
-
 .service{
     max-width: 200px;
     margin: 0 auto;
 
+}
+
+/* Media */
+
+@media(min-width:900px){
+    .services{
+        display: flex;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-left: auto;
+    }
+
+    .service + .service{
+        margin-left: 5em;
+    }
+}
+
+/* about me  */
+
+.about-me{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-me__img{
+    box-shadow: var(--bs);
+}
+
+/* my work */
+
+.my-work{
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    text-align: center; 
+}
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax);
+    gap: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.portfolio__item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4em 2em;
+    background-color: var(--clr-black);
+    margin: 0 auto;
+}
+
+.section__title--portfolio{
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent);
+    text-align: left;
+}
+
+.btn-portfolio{
+    margin-top: 2em;
+
+}
+
+/* footer styles */
+
+.footer{
+    background: #000;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+}
+
+.footer a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-link{
+    font-weight: var(--fw-bold);
+}
+
+.footer-link:hover,
+.social-list__link:hover{
+    opacity: 0.7;
+}
+
+.footer-link:hover{
+    text-decoration: underline;
+}
+
+.social-list{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 2em 0;
+    padding: 0;
+}
+
+.social-list__item{
+    margin: 0.5em;
+}
+
+.social-list__link{
+    padding: 0.7 ;
 }
