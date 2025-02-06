@@ -17,4 +17,21 @@ for (const row of rows) {
   result = result + row + "\n";
 }
 console.log(result);
+// answer to 3 and 4
 answerto3 =`Hello`
+// answer to 5
+const firstClassFuntion = (a, b) => {
+  return (a + " " + b);
+}
+
+console.log(firstClassFuntion("hi", "bye"));
+// answer to 6
+function fun() {
+  console.log("Hello, World!");
+}
+function fun2(action) {
+  action();
+  action();
+}
+
+fun2(fun);
