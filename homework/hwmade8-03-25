@@ -1,0 +1,7 @@
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
+}
+
+// Call the function and log the result
+const result = sum(1, 2, 3,4,);
+console.log(`The sum is: ${result}`);
