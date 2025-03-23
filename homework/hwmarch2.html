@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navigation Bar</title>
+    <style>
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        li {
+            padding: 10px 20px;
+            background-color: #555;
+            color: white;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul id="nav-list"></ul>
+    </nav>
+
+    <script >
+        // Function to generate a random number between 0 and 99
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 100);
+        }
+
+        // Get the <ul> element where i will add the list items
+        let navList = document.getElementById("nav-list");
+
+        // want to create 5 random numbers for the navigation bar
+        for (let i = 0; i < 5; i++) {
+            // Create a new <li> element
+            let listItem = document.createElement("li");
+
+            // Set the text of the <li> element to a random number
+            listItem.textContent = getRandomNumber();
+
+            // Add the <li> element to the <ul> in the navigation bar
+            navList.appendChild(listItem);
+        }
+
+    </script>
+
+</body>
+</html>
