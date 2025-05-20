@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asynchronous JavaScript Assignment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ff6961;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    ⚠️ There was no question for Part C, so I couldn't complete it.
+  </header>
+
+  <div class="container">
+    <h2>🧠 Part A – Research & Write</h2>
+
+    <h3>1. What is asynchronous JavaScript and why is it needed?</h3>
+    <p>
+      Asynchronous JavaScript allows code to run without waiting for other code to finish. It's useful for handling tasks like loading data or waiting for user input, without stopping everything else. This makes websites faster and smoother for users.
+    </p>
+
+    <h3>2. Differences between Callbacks, Promises, and Async/Await</h3>
+    <p>
+      <strong>Callbacks</strong> are functions passed into another function to run later. They work but can become messy with too much nesting.<br>
+      <strong>Promises</strong> provide a cleaner way to handle waiting for something. You use `.then()` for success and `.catch()` for errors.<br>
+      <strong>Async/Await</strong> makes your code look like normal steps, using the `await` keyword to wait for results, and `try/catch` for errors.
+    </p>
+
+    <h3>3. What is "callback hell", and how do promises or async/await solve it?</h3>
+    <p>
+      Callback hell is when you have many callbacks inside each other, making code hard to read. Promises solve this by chaining steps instead of nesting. Async/await makes the code even easier to follow, like reading top to bottom.
+    </p>
+
+    <h3>4. Real-life analogy for how promises work</h3>
+    <p>
+      Ordering food at a restaurant is like a promise. You place your order and get a receipt (the promise). Later, your food arrives (fulfilled) or they say it's not available (rejected).
+    </p>
+
+    <hr>
+
+    <h2>💻 Part B – Coding Challenge</h2>
+
+    <p>Open your browser console to see the output from the JavaScript code below.</p>
+
+    <pre><code>
+// Simple simulated API using a Promise
+function simulateAPI() {
+  return new Promise(function(resolve, reject) {
+    // Wait for 2 seconds
+    setTimeout(function() {
+      resolve({ username: "student123", role: "developer" });
+    }, 2000);
+  });
+}
+
+// Async function that waits for the result
+function getUserData() {
+  simulateAPI()
+    .then(function(result) {
+      console.log("Simulated API result:", result);
+    })
+    .catch(function(error) {
+      console.log("Something went wrong:", error);
+    });
+}
+
+// Fetch posts and show first 5 titles
+function fetchPosts() {
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(function(response) {
+      return response.json(); // convert to JSON
+    })
+    .then(function(data) {
+      console.log("First 5 post titles:");
+      for (var i = 0; i < 5; i++) {
+        console.log((i + 1) + ". " + data[i].title);
+      }
+    })
+    .catch(function(error) {
+      console.log("Error fetching posts:", error);
+    });
+}
+
+// Run both functions
+getUserData();
+fetchPosts();
+    </code></pre>
+
+  </div>
+
+</body>
+</html>
